@@ -4,13 +4,7 @@ from cust.models import User
 
 # Create your models here.
 
-class Property(models.Model):
-    def year_choices():
-        return [(r,r) for r in range(1984, datetime.date.today().year+1)]
-
-    def current_year():
-        return datetime.date.today().year
-
+class Property(models.Model):   
     property_name = models.CharField(max_length=200,null=True,blank=True)
     place = models.CharField(max_length=200,null=True,blank=True)
     area = models.IntegerField()
